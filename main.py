@@ -81,20 +81,14 @@ def get_posts(url, scroll_iterations_count, df_name, separator):
 
 
 def open_file(file_name):
-    try:
-        file = open(file_name + ".txt", "r")
-        file.close()
-    except Exception as e:
-        file = open(file_name + ".txt", "w")
-        file.close()
-    file_df = pd.read_csv(file_name + ".txt", sep="\n", dtype="str")
+    file_df = pd.read_csv(file_name + ".csv", dtype="str", sep="~")
     return file_df
 
 
 if __name__ == "__main__":
     queries = open_file("queries")
     
-    for qurrent_query in queries:
+    for qurrent_query in queries["queries"]:
         print("Qurrent querie: " + str(qurrent_query))
         scroll_iterations_count = 5
         df_name = "main.csv"
