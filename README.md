@@ -15,3 +15,5 @@ This parser can help you get posts content, that contains some text from search 
 The first step: write text of search queries in queries.txt.
 After this step, you should launch main.py and wait.
 Open file main.csv and get your posts content.
+
+P.S.: first version is not working correctly.
