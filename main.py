@@ -86,6 +86,8 @@ def open_file(file_name):
 
 
 if __name__ == "__main__":
+    random_sleep = randint(99999)
+    time.sleep(random_sleep / 1000)
     queries = open_file("queries")
     
     for qurrent_query in queries["queries"]:
